@@ -61,7 +61,13 @@ function rpsFrontEnd(humanImageChoice, BotImageChoice, finalMessage) {
 
     humanDiv.innerHTML = "<img src='" + imagesDataBase[humanImageChoice] +"'height=150 width=150 style='box-shadow: 0px 15px 60px: rgba(37, 50, 233, 1);'>"
     botDiv.innerHTML = "<img src='" + imagesDataBase[BotImageChoice] +"'height=150 width=150 style='box-shadow: 0px 15px 60px: rgba(243, 28, 24, 1);'>"
+    messageDiv.innerHTML = "<h1 style='color: " + finalMessage['color'] + "; font-size:60px; padding:30px '>" + finalMessage['message'] + "</h1>"
     
     document.getElementById('flex-box-rps-div').appendChild(humanDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
+    document.getElementById('flex-box-rps-div').appendChild(messageDiv);
+   
+}
+function reset() {
+    document.getElementById('flex-box-rps-div').remove()
 }
